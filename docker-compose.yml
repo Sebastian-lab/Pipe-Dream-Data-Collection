@@ -1,0 +1,10 @@
+services:
+  weather-collector:
+    build: .
+    container_name: weather-collector
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - DB_NAME=${DB_NAME:-weather_db}
+      - OPEN_METEO_URL=${OPEN_METEO_URL:-https://api.open-meteo.com/v1/forecast}
+      - REFRESH_INTERVAL_MINUTES=${REFRESH_INTERVAL_MINUTES:-1}
+    restart: unless-stopped
