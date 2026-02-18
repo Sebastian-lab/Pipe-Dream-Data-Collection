@@ -1,0 +1,22 @@
+If perms are set up correctly you don't need to use sudo in any of these commands
+
+Update all dependencies: sudo yum update -y 
+
+commands to install docker on ec2 instance:
+    sudo apt update
+    sudo yum install -y docker
+    sudo service docker start
+
+gives perms to ec2 user so they don't have to use sudo in the future: sudo usermod -a -G docker ec2-user
+
+command to build the docker: sudo docker build -t pipe-dream-data-collection:v1.0 -f Dockerfile .
+
+shows you the docker images on the instance: sudo docker images
+
+delete a docker image: sudo docker rmi -f imageID
+
+run the docker: sudo docker run -d -p 80:8000 -e MONGO_URI='Your MONGO_URI' pipe-dream-data-collection:v1.0
+
+show the current dockers running: sudo docker ps
+
+get the log of the docker: sudo docker logs dockerID
