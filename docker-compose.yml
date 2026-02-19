@@ -7,4 +7,5 @@ services:
       - DB_NAME=${DB_NAME:-weather_db}
       - OPEN_METEO_URL=${OPEN_METEO_URL:-https://api.open-meteo.com/v1/forecast}
       - REFRESH_INTERVAL_MINUTES=${REFRESH_INTERVAL_MINUTES:-1}
-    restart: unless-stopped
+    volumes:
+      - ./historical_data:/app/historical_data

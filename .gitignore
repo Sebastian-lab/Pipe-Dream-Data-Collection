@@ -1,2 +1,4 @@
 .env
 *.pem
+historical_data/
+__pycache__/
