@@ -1,7 +1,10 @@
 services:
   weather-collector:
     build: .
+    image: pipe-dream-data-collection:v1.0
     container_name: weather-collector
+    ports:
+      - "80:8000"
     environment:
       - MONGO_URI=${MONGO_URI}
       - DB_NAME=${DB_NAME:-weather_db}
