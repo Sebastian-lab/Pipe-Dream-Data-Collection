@@ -35,7 +35,8 @@ CITIES = [
     {"name": "Las Vegas", "lat": 36.1699, "lng": -115.1398, "timezone": "America/Los_Angeles"},
     {"name": "London", "lat": 51.5074, "lng": -0.1278, "timezone": "Europe/London"},
     {"name": "Sydney", "lat": -33.8688, "lng": 151.2093, "timezone": "Australia/Sydney"},
-    {"name": "New York", "lat": 40.7128, "lng": -74.0060, "timezone": "America/New_York"}
+    {"name": "New York", "lat": 40.7128, "lng": -74.0060, "timezone": "America/New_York"},
+    {"name": "Beijing", "lat": 39.9042, "lng": 116.4074, "timezone": "Asia/Shanghai"}
 ]
 
 
